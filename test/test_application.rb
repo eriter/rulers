@@ -18,4 +18,9 @@ class RulersAppTest< Test::Unit::TestCase
     assert body["Hello"]
   end
 
+  def test_404
+    get "/404"
+    assert last_response.ok?
+  end
+
 end
